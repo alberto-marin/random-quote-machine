@@ -1,6 +1,28 @@
 document.addEventListener('DOMContentLoaded',function(){
 
   var circleBackground = document.getElementsByClassName('circle-background')[0];
+
+//----------------------------------------------------
+//                      COLOR
+//----------------------------------------------------
+
+circleBackground.style['background-color'] = getRandomColor();
+console.log(circleBackground.style['background-color']);
+
+function getRandomColor() {
+  var softColors = ["C","D","E","F"];
+  var randomColor = [];
+  for (var i = 0; i < 6; i++) {
+    randomColor[i] = softColors[Math.floor(Math.random() * softColors.length)];
+  }
+  return '#' + randomColor.join('');
+
+}
+
+//----------------------------------------------------
+//                     POSITION
+//----------------------------------------------------
+
   circleBackground.style.top = getRandomIntInclusive(0,50) + '%';
   circleBackground.style.bottom = getRandomIntInclusive(0,50) + '%';
   circleBackground.style.left = getRandomIntInclusive(0,50) + '%';
