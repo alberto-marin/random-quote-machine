@@ -20,6 +20,8 @@ body {
 
 button {
   border: none;
+  font-size: 1.5em;
+  display: block;
 }
 
 .container {
@@ -29,10 +31,10 @@ button {
 }
 
 .dark {
-  padding: 1.5em;
+  padding: 1em;
   background: #35424a;
   color: #fff;
-  margin: 1em 0;
+  margin: 1em .5em;
 }
 /*
 -------------------------------------------------
@@ -63,4 +65,17 @@ button {
   align-items: center; /* Vertical center alignment */
   justify-content: center; /* Horizontal center alignment */
   text-align: center;
+  font-family: 'Indie Flower', cursive;
+  padding: 1em;
+  box-shadow: 0 8px 2px 8px rgba(0, 0, 0, 0.2);
+}
+/*
+-------------------------------------------------
+               TWITTER SHARE LINK
+-------------------------------------------------
+*/
+.twitter-share-button {
+  text-decoration: none;
+  text-align: center;
+  display: block;
 }

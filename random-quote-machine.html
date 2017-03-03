@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Random Quote Machine</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -13,6 +14,7 @@
   <div class="container">
     <div class="generator">
       <button type="button" name="button" class="dark" id="button-generator">Generate a random quote</button>
+      <a class="twitter-share-button dark" href="">Tweet</a>
     </div>
     <div id="random">
       <!-- Random circles go here -->
@@ -24,6 +26,7 @@
       $('#button-generator').click(function (){
         $.getJSON("http://api.icndb.com/jokes/random", function(a) {
           $(".circle-background:last-child").append('<p class="quote">' + a.value.joke + '</p>');
+          $(".twitter-share-button").attr("href","https://twitter.com/intent/tweet?text="+ a.value.joke);
         });
       });
     });
