@@ -59,4 +59,8 @@ button {
   width: 300px;
   height: 300px;
   border-radius: 50%;
+  display:flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+  text-align: center;
 }
